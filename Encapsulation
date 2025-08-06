@@ -1,0 +1,39 @@
+Encapsulation is defined as the process of wrapping data and the methods into a single unit, typically a class. It is the mechanism that binds together the code and the data. It manipulates. Another way to think about encapsulation is that it is a protective shield that prevents the data from being accessed by the code outside this shield. 
+Code:
+class Employee {
+    // Private fields (encapsulated data)
+    private int id;
+    private String name;
+
+    // Setter methods 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter methods
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        
+        // Using setters
+        emp.setId(101);
+        emp.setName("Geek");
+
+        // Using getters
+        System.out.println("Employee ID: " + emp.getId());
+        System.out.println("Employee Name: " + emp.getName());
+    }
+}
